@@ -1,0 +1,6 @@
+bin_PROGRAMS = a100
+lib_LTLIBRARIES = liba100.la
+
+a100_SOURCES = a100.c
+a100_CFLAGS = $(AM_CFLAGS)
+liba100_la_SOURCES = a100.c
