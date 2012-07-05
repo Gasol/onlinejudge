@@ -43,7 +43,7 @@ int cycle_count(int num)
     int cycle = 1;
 
     while (num != 1) {
-        if (num % 2) {
+        if (num & 1) {
             num = 3 * num + 1;
         } else {
             num = num / 2;
