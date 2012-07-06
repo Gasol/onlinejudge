@@ -5,4 +5,4 @@ int cycle_count(int num);
 
 int max_cycle(int i, int j);
 
-#endif  // UVA_SRC_A100_H_
+#endif  /* UVA_SRC_A100_H_ */
