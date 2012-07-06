@@ -1,6 +1,9 @@
 #include<stdlib.h>
 #include<stdio.h>
+
+#ifndef ONLINE_JUDGE
 #include"a100.h"
+#endif
 
 int main(int argc, char *argv[])
 {
