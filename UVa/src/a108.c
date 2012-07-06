@@ -20,12 +20,12 @@ int main(int argc, char *argv[])
     int value = 0;
     int i = 0;
     while (i < n * n) {
-		scanf("%d", &value);
+        scanf("%d", &value);
         array[i++] = value;
     }
 
-	int sum = max_sum(array, n);
-	printf("%d\n", sum);
+    int sum = max_sum(array, n);
+    printf("%d\n", sum);
 
     return EXIT_SUCCESS;
 }
@@ -33,18 +33,18 @@ int main(int argc, char *argv[])
 int max_sum(int array[], int n)
 {
     int matrix[n][n];
-	int prefix_column[n][n];
+    int prefix_column[n][n];
 
     int i = 0;
-	for (; i < n * n; i++) {
-		int x = i / n;
-		int y = i % n;
-		matrix[x][y] = array[i];
-		prefix_column[x][y] = matrix[x][y];
-		if (x) {
-			prefix_column[x][y] += prefix_column[x - 1][y];
-		}
-	}
+    for (; i < n * n; i++) {
+        int x = i / n;
+        int y = i % n;
+        matrix[x][y] = array[i];
+        prefix_column[x][y] = matrix[x][y];
+        if (x) {
+            prefix_column[x][y] += prefix_column[x - 1][y];
+        }
+    }
 
 #ifdef DEBUG
     printf("Input Matrix\n");
@@ -59,27 +59,27 @@ int max_sum(int array[], int n)
     printf("\n");
 #endif
 
-	int	max_sum = INT_MIN;
-	i = 0;
-	for(; i < n; i++) {
-		int j;
-		for(j = i; j < n; j++) {
-			int sum = 0;
-			int k = 0;
-			for(; k < n; k++) {
-				sum += prefix_column[j][k];
-				if (i) {
-					sum -= prefix_column[i - 1][k];
-				}
-				if(sum > max_sum) {
-					max_sum = sum;
-				}
-				if (sum < 0) {
-					sum = 0;
-				}
-			}
-		}
-	}
+    int	max_sum = INT_MIN;
+    i = 0;
+    for(; i < n; i++) {
+        int j;
+        for(j = i; j < n; j++) {
+            int sum = 0;
+            int k = 0;
+            for(; k < n; k++) {
+                sum += prefix_column[j][k];
+                if (i) {
+                    sum -= prefix_column[i - 1][k];
+                }
+                if(sum > max_sum) {
+                    max_sum = sum;
+                }
+                if (sum < 0) {
+                    sum = 0;
+                }
+            }
+        }
+    }
 
 #ifdef DEBUG
     printf("Vertical Prefix Sum\n");
@@ -93,5 +93,5 @@ int max_sum(int array[], int n)
     printf("\n");
 #endif
 
-	return max_sum;
+    return max_sum;
 }
