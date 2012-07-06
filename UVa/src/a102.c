@@ -38,10 +38,10 @@ int main(int argc, char *argv[])
         int index = -1;
 
         int i = 0;
-        for (i; i < rules_count; i++) {
+        for (; i < rules_count; i++) {
             int move = 0;
             int j = 0;
-            for (j; j < bins_size; j++) {
+            for (; j < bins_size; j++) {
                 if (rules[i][j] == B) {
                     move += bins[j].green + bins[j].clear;
                 }
