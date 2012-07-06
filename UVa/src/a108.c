@@ -6,7 +6,6 @@
 #include"a108.h"
 #endif
 
-extern int* kadane_algorithm(int array[], int len);
 extern int max_sum(int array[], int N);
 
 int main(int argc, char *argv[])
