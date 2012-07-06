@@ -10,6 +10,7 @@ AM_PROG_AR
 
 # Checks for libraries.
 PKG_CHECK_MODULES([CHECK], [check >= 0.9.4])
+AC_CHECK_LIB([m], [pow])
 
 # Checks for header files.
 
