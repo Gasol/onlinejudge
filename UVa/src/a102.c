@@ -53,10 +53,7 @@ int main(int argc, char *argv[])
                 }
             }
 
-            if (move <= min_move) {
-                min_move = move;
-                index = i;
-            } else if (index < 0) {
+            if (move <= min_move || index < 0) {
                 min_move = move;
                 index = i;
             }
