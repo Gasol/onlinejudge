@@ -1,5 +1,27 @@
+# Object files
+*.o
+*.ko
+*.lo
+
+# Libraries
+*.lib
+*.la
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
 # http://www.gnu.org/software/automake
 
+Makefile
 Makefile.in
 
 # http://www.gnu.org/software/autoconf
@@ -11,3 +33,11 @@ Makefile.in
 /depcomp
 /install-sh
 /missing
+
+/config.*
+/libtool
+/ltmain.sh
+/ar-lib
+/stamp-h1
+.deps
+.libs
